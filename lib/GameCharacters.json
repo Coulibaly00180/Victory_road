@@ -1,0 +1,112 @@
+[
+    {
+        "name": "Zohen",
+        "element": "Terre",
+        "level": 30,
+        "attributes": {
+            "frappe": 68,
+            "controle": 90,
+            "pression": 166,
+            "physique": 128,
+            "agilite": 90,
+            "intelligence": 72,
+            "technique": 106,
+            "total": 720
+        },
+        "attacks": [
+            {
+                "type": "Tir",
+                "value": 158
+            },
+            {
+                "type": "Focus",
+                "value": 196
+            },
+            {
+                "type": "Duel",
+                "value": 200
+            }
+        ],
+        "defenses": [
+            {
+                "type": "Rempart",
+                "value": 294
+            },
+            {
+                "type": "Focus",
+                "value": 178
+            },
+            {
+                "type": "Duel",
+                "value": 238
+            }
+        ],
+        "goalkeeping": 218,
+        "techniques": [
+            {
+                "name": "Tacle incendiaire",
+                "value": 240
+            },
+            {
+                "name": "Tacle glacial",
+                "value": 240
+            }
+        ],
+        "teamPassives": "Quand l'équipe perd un Duel, perte de Puissance de lien -50% pendant 10 sec"
+    },
+    {
+        "name": "Zohen",
+        "element": "Terre",
+        "level": 30,
+        "attributes": {
+            "frappe": 68,
+            "controle": 90,
+            "pression": 166,
+            "physique": 128,
+            "agilite": 90,
+            "intelligence": 72,
+            "technique": 106,
+            "total": 720
+        },
+        "attacks": [
+            {
+                "type": "Tir",
+                "value": 158
+            },
+            {
+                "type": "Focus",
+                "value": 196
+            },
+            {
+                "type": "Duel",
+                "value": 200
+            }
+        ],
+        "defenses": [
+            {
+                "type": "Rempart",
+                "value": 294
+            },
+            {
+                "type": "Focus",
+                "value": 178
+            },
+            {
+                "type": "Duel",
+                "value": 238
+            }
+        ],
+        "goalkeeping": 218,
+        "techniques": [
+            {
+                "name": "Tacle incendiaire",
+                "value": 240
+            },
+            {
+                "name": "Tacle glacial",
+                "value": 240
+            }
+        ],
+        "teamPassives": "Quand l'équipe perd un Duel, perte de Puissance de lien -50% pendant 10 sec"
+    }    
+]

@@ -1,6 +1,69 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
 
+class CustomBottomNavigationBar extends StatefulWidget {
+  const CustomBottomNavigationBar({super.key, required this.navigationShell});
+  final StatefulNavigationShell navigationShell;
+
+  @override
+  State<CustomBottomNavigationBar> createState() => _CustomBottomNavigationBarState();
+}
+
+class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
+  
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index){
+    widget.navigationShell.goBranch(
+      index, 
+      initialLocation: index == widget.navigationShell.currentIndex
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SizedBox(
+        width: double.infinity,
+        height: double.infinity,
+        child: widget.navigationShell,
+      ),
+      bottomNavigationBar: SlidingClippedNavBar(
+        backgroundColor: Colors.white,
+        onButtonPressed: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+          _onItemTapped(_selectedIndex);
+        },
+        iconSize: 30,
+        activeColor: Colors.black,
+        selectedIndex: _selectedIndex,
+        barItems: [
+          BarItem(
+            icon: Icons.home,
+            title: 'Home',
+          ),
+          BarItem(
+            icon: Icons.sports_esports,
+            title: 'Tournament',
+          ),
+          BarItem(
+            icon: Icons.group,
+            title: 'Team',
+          ),
+          BarItem(
+            icon: Icons.person,
+            title: 'Profile',
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/*
 class CustomBottomNavigationBar extends StatefulWidget {
   @override
   _CustomBottomNavigationBarState createState() => _CustomBottomNavigationBarState();
@@ -37,7 +100,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.sports_soccer),
+            icon: Icon(Icons.sports_esports),
             label: 'Tournament',
           ),
           BottomNavigationBarItem(
@@ -56,3 +119,4 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
     );
   }
 }
+*/

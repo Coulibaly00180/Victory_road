@@ -17,7 +17,6 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Text('Home Screen Content Goes Here'),
         ),
       ),
-      bottomNavigationBar: CustomBottomNavigationBar(),
     );
   }
 }
